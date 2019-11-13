@@ -27,12 +27,12 @@ name.innerHTML = quest3;
 //Question -4   https://i.ibb.co/3pLrM92/MC-1.png  адрес картинки
 let quest4 = prompt('Введите адрес картинки');
 const image = document.querySelector('img');
-image.setAttribute('src', 'quest4');
+image.setAttribute('src', quest4);
 
 //Question -5
 let quest5 = prompt('Введите текст страницы');
 const text = document.querySelector('.shortBio');
-text.setAttribute('.shortBio', 'quest5');
+text.innerHTML = quest5;
 
 //Question -6
 const shortBio = document.querySelector('.shortBio');
