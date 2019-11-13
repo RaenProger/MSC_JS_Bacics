@@ -5,28 +5,38 @@
 
 //Question -1
 
-const Body = document.querySelector('body');
+const body = document.querySelector('body');
 
 let quest = prompt('Какой ты хошечшь фон у страницы?');
-Body.style.backgroundColor = quest;
+body.style.backgroundColor = quest;
 
 //Question -2
 
-const Page = document.querySelector('.page');
+const page = document.querySelector('.page');
 
 let quest2 = prompt('Какой будет цвет текста на странице?');
-Page.style.backgroundColor = quest2;
+page.style.backgroundColor = quest2;
 
 //Question -3
 let quest3 = prompt('Как зовут человека, который вас вдохновляет?');
-const Name = document.querySelector('.name');
-Name.setAttribute('name', '');
+const name = document.querySelector('.name');
+
+name.innerHTML = quest3;
 
 
+//Question -4   https://i.ibb.co/3pLrM92/MC-1.png  адрес картинки
+let quest4 = prompt('Введите адрес картинки');
+const image = document.querySelector('img');
+image.setAttribute('src', 'quest4');
 
+//Question -5
+let quest5 = prompt('Введите текст страницы');
+const text = document.querySelector('.shortBio');
+text.setAttribute('.shortBio', 'quest5');
 
-
-
+//Question -6
+const shortBio = document.querySelector('.shortBio');
+shortBio.className += ' animated'; 
 
 
 
