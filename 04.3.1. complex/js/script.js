@@ -33,4 +33,9 @@ console.log('player win');
 		console.log('computer win');
    }else if(player == 0 && computer == 2){
 	console.log('computer win');
+}else{
+	player == 0 && computer == 0;
+	player == 1 && computer == 1;
+	player == 2 && computer == 2;
+	console.log('none');
 }
