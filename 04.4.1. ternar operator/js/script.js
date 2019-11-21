@@ -9,6 +9,9 @@ Image.style.backgroundImage = 'url(img/item1.png)':
 Image.style.backgroundImage = 'url(img/item7.png)';
 */
 
+
+
+//GAME
 const rock = 0;
 const scissors = 1;
 const paper = 2;
@@ -20,7 +23,7 @@ let computer = Math.floor(Math.random() * 3);
 
 // опишем все условия и будем выводить в консоль 'computer win' или 'player win'
 
-//Game
+
 player == 0 && computer == 1 ?
 console.log('player win'):
 console.log('computer win');
