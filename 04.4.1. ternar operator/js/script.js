@@ -11,7 +11,7 @@ Image.style.backgroundImage = 'url(img/item7.png)';
 
 
 
-//GAME
+/*GAME
 const rock = 0;
 const scissors = 1;
 const paper = 2;
@@ -35,5 +35,14 @@ console.log('computer win');
 player == 2 && computer == 0 ?
 console.log('player win'):
 console.log('computer win');
+*/
+
+//MODUL
+const userNumber = prompt('Введите число');
+userNumber < 0 ?
+result = userNumber * -1:
+result = userNumber;
+
+console.log(result);
 
 
