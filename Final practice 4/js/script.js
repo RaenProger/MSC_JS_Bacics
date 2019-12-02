@@ -43,8 +43,17 @@ if(state == 'none'){
 menu.style.left = '0';
 state = '0';
 } else {
-closeMenu.style.left = '-50vw';
+menu.style.left = '-50vw';
 state = '-50vw';
 }
 });
 
+closeMenu.addEventListener('click' , function(){
+    if (state == 'none'){
+        closeMenu.style.left = '-50vw';
+        state = '-50vw';
+    } else {
+        closeMenu.style.left = '0';
+        state = '0';
+    }
+    });
