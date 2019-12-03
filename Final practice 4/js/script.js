@@ -19,41 +19,30 @@ https://jsfiddle.net/Lsk3qopt/
 */
 
 // 1. 2.
-const button = document.querySelector('button');
+const button = document.querySelector('.request');
+const closePopUp = document.querySelector('.closePopup');
 const popUp = document.querySelector('.popup');
 
-let state = 'none';
+
 button.addEventListener('click', function(){
-    if (state == 'none'){
-    popUp.style.display = 'flex';
-    state = 'flex';
-    } else {
-    popUp.style.display = 'none';
-    state = 'none';
-    }
+popUp.style.display = 'flex';
+});
+
+popUp.addEventListener('click', function(){
+popUp.style.display = 'none';
 });
 
 // 3.4.
 const openMenu = document.querySelector('.openMenu');
-const menu = document.querySelector('.menu');
 const closeMenu = document.querySelector('.closeMenu');
+const menu = document.querySelector('.menu');
+
+
 
 openMenu.addEventListener('click' , function(){
-if(state == 'none'){
 menu.style.left = '0';
-state = '0';
-} else {
-menu.style.left = '-50vw';
-state = '-50vw';
-}
 });
 
 closeMenu.addEventListener('click' , function(){
-    if (state == 'none'){
-        closeMenu.style.left = '-50vw';
-        state = '-50vw';
-    } else {
-        closeMenu.style.left = '0';
-        state = '0';
-    }
+   menu.style.left = '-50vw';
     });
