@@ -7,9 +7,9 @@
 const form = document.forms[0];
 const insert = document.querySelector('.total');
 
-form.onsubmit = function(e) {
+form.addEventListener = function(e){
 	e.preventDefault();
-	Math.sin();
-	insert.innerHTML = form.elements.quantility.value * form.elements.price.value;
+	Math.sin()
+	insert.innerHTML = Math.sin(Math.PI / 2);
 };
 
