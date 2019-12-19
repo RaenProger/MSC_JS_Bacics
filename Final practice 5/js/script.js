@@ -23,18 +23,17 @@ price: 140  
 }
 ]
 
-let element = document.querySelector('h2');
-let elements = document.querySelector('h2');
-
-element.innerHTML = 34;
-elements.innerHTML = 36;
+let Bitcoin = document.getElementById('Bitcoin');
+let Ethereum = document.getElementById('Ethereum');
+let Litecoin = document.getElementById('Litecoin');
 
 
 
 
-/* for (let key in crypto){
- element.innerHTML = crypto[key].name;
- console.log(crypto[key].name);
-} */
+for (let key in crypto){
+ Bitcoin.innerHTML = crypto[key].name;
+ Ethereum.innerHTML = crypto[key].name;
+ Litecoin.innerHTML = crypto[key].name;
+} 
 
 
