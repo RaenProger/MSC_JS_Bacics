@@ -31,8 +31,11 @@ price: 140  
 
 
 for (let key in crypto){
-  let element = document.getElementById(`title-0`);
-  element.innerHTML = crypto[key].name;
+  let value = document.getElementById(`title-${key}`);
+  value.innerHTML = crypto[key].name;
+  let price = document.getElementById(`price-${key}`);
+  price.innerHTML = crypto[key].name;
 }
+
 
 
