@@ -11,7 +11,7 @@
 let crypto = [  
 {    
 name : "Bitcoin",    
-price: 1388.37  
+price: 1300
 },  
 {    
 name : "Ethereum",    
@@ -24,9 +24,6 @@ price: 140  
 ]
 
 
-// let Ethereum = document.getElementById('Ethereum');
-// let Litecoin = document.getElementById('Litecoin');
-
 
 
 
@@ -37,8 +34,7 @@ for (let key in crypto){
   let price = document.getElementById(`price-${key}`);
   price.innerHTML = crypto[key].price;
 
-  
+  let block = document.getElementById(`block-${key}`);
+  block.style.width = price.;
 }
-
-
 

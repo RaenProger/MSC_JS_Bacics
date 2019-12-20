@@ -1,5 +1,23 @@
-/* .block{
-  width: 100px;
-  height: 50px;
+ div {
+   height: 15px;
+   border: 1px solid black;
+ }
+ 
+ 
+ 
+ 
+ #block-0{
+  
   background-color: red;
-} */
+} 
+
+#block-1{
+
+  background-color: blue;
+} 
+
+
+#block-2{
+ 
+  background-color: green;
+} 
