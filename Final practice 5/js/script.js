@@ -35,6 +35,6 @@ for (let key in crypto){
   price.innerHTML = crypto[key].price;
 
   let block = document.getElementById(`block-${key}`);
-  block.style.width = price.;
+  block.style.width = price.innerText + 'px';
 }
 
