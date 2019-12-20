@@ -6,10 +6,10 @@
 
 const form = document.forms[0];
 const insert = document.querySelector('.total');
+const input = document.querySelector('input');
 
 form.addEventListener = function(e){
 	e.preventDefault();
-	Math.sin()
-	insert.innerHTML = Math.sin(Math.PI / 2);
+	insert.innerHTML = Math.sin(input.value);
 };
 

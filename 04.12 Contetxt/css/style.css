@@ -1,0 +1,36 @@
+
+
+.button span{
+	margin: auto;
+	font-size: 2em;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+
+
+
+
+.ball{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+	border-radius: 50%;
+	animation: go 1s linaer infinite alternate;
+	animation-play-state: paused;
+
+}
+
+.show{
+	display: flex;
+}
+
+p{
+	width: 500px;
+	margin: auto;
+	padding: 40px;
+	background: white;
+	box-shadow: 0 0 5px black;
+	opacity: .5;
+	transition: .5s;
+}
