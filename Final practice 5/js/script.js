@@ -11,7 +11,7 @@
 let crypto = [  
 {    
 name : "Bitcoin",    
-price: 1300
+price: 80
 },  
 {    
 name : "Ethereum",    
@@ -19,7 +19,7 @@ price: 716  
 },  
 {    
 name : "Litecoin",    
-price: 140  
+price: 190  
 }
 ]
 
