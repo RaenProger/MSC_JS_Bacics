@@ -6,25 +6,32 @@
 Если чувствуете силы — добавьте второй вывод со скоростью ветра. */
 
 
+const form = document.forms[0];
+const insert = document.querySelector('.total');
+
+let btn = document.querySelector('.btn');
+let cityName = document.querySelector('.inp');
 
 
 const APIKey = '90ab88407ceb8e25a4c7614048316c1c';
 const city = 'Miami';
-const url = 'https://samples.openweathermap.org/data/2.5/weather?q='+city+'&appid='+APIKey;
+const url = 'https://openweathermap.org/data/2.5/weather?q='+city+'&appid='+APIKey;
 
 let xhr = new XMLHttpRequest(); // Новый запрос
 xhr.open('GET', url, false); //Настройки
 xhr.send(); //Отправление
 
 
+form.onsubmit = function(e) {
+    e.preventDefault();
+    let DATA = JSON.parse(xhr.responseText);
 
-if(xhr.status != 200){
-    console.log(xhr.status + '' + xhr.statusText); // Проверка статуса  
-}else{
-   let DATA = JSON.parse(xhr.responseText); // Статус ответа
-   console.log();
-   document.write(DATA.main.temp - 273);
-}
+    if(cityName.value == city) {
+        insert.innerHTML = DATA.main.temp - 273;
+    } else {
+        insert.innerHTML = 'такого города нет';
+    }
+};
 
 
 
