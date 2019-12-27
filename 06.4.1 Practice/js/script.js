@@ -7,30 +7,31 @@
 
 
 const form = document.forms[0];
+
+form.onsubmit = function(e) {
 const insert = document.querySelector('.total');
+const cityName  = document.querySelector('.inp').value;
 
 let btn = document.querySelector('.btn');
-let cityName = document.querySelector('.inp');
+
 
 
 const APIKey = '90ab88407ceb8e25a4c7614048316c1c';
-const city = 'Miami';
-const url = 'https://openweathermap.org/data/2.5/weather?q='+city+'&appid='+APIKey;
+const url = 'https://api.openweathermap.org/data/2.5/weather?q='+cityName+'&appid='+APIKey;
 
 let xhr = new XMLHttpRequest(); // Новый запрос
 xhr.open('GET', url, false); //Настройки
 xhr.send(); //Отправление
 
 
-form.onsubmit = function(e) {
+
     e.preventDefault();
+   
     let DATA = JSON.parse(xhr.responseText);
 
-    if(cityName.value == city) {
+    
         insert.innerHTML = DATA.main.temp - 273;
-    } else {
-        insert.innerHTML = 'такого города нет';
-    }
+    
 };
 
 
