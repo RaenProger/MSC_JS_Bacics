@@ -7,7 +7,7 @@ constructor(name, email, password){
 sayHi() {
     return 'Hello' + this.name;
 }
-}
+}   
 
 class Female extends User {
     sayHi(){
