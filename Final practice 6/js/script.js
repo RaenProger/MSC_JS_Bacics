@@ -72,7 +72,7 @@ let xhr = new XMLHttpRequest(); // Новый запрос
 xhr.open('GET', url, false); //Настройки
 xhr.send(); //Отправление
 
-
+    
 
 if(xhr.status != 200){
   console.log(xhr.status + '' + xhr.statusText); // Проверка статуса  
@@ -84,9 +84,10 @@ if(xhr.status != 200){
 
 if((DATA.main.temp - 273) > 15){
   return (++this.happiness);
-      }
 } else {
   return (this.happiness); 
 }
+  
 
-};
+
+    };
