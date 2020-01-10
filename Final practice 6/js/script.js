@@ -16,7 +16,11 @@ https://yadi.sk/d/f1LSDu5Z3WMTJ5
  a. ﻿hasCat() — возвращает this.happiness увеличенное на 1
  b. ﻿hasRest() — возвращает this.happiness увеличенное на 1
  c. ﻿hasMoney() — возвращает this.happiness увеличенное на 1
- d. ﻿isSunny() — получает данные о погоде в Москве из API и в случае если температура в цельсиях больше 15 градусов. увеличивает this.happiness на 1 и возвращает this.happiness (всегда возвращается this.happiness, независимо, увеличили на 1 или нет)
+
+ d. ﻿isSunny() — получает данные о погоде в Москве из API и в случае если температура 
+в цельсиях больше 15 градусов. увеличивает this.happiness на 1 и возвращает 
+this.happiness (всегда возвращается this.happiness, независимо, увеличили на 1 или нет)
+
 4. ﻿Когда мы заполняем форму в левой колонке и нажимаем submit, происходит такой алгоритм
  a. ﻿Отменяется дефолтное событие
  b. ﻿Собираются в переменные все данные из формы
@@ -59,9 +63,30 @@ window.onload = function() {
       return (++this.happiness);
     }
 
-  }
+    isSunny(){
+      const APIKey = '90ab88407ceb8e25a4c7614048316c1c';
+const city = 'Moscow';
+const url = 'https://openweathermap.org/data/2.5/weather?q='+city+'&appid='+APIKey;
+
+let xhr = new XMLHttpRequest(); // Новый запрос
+xhr.open('GET', url, false); //Настройки
+xhr.send(); //Отправление
 
 
 
+if(xhr.status != 200){
+  console.log(xhr.status + '' + xhr.statusText); // Проверка статуса  
+}else {
+ let DATA = JSON.parse(xhr.responseText); // Статус ответа
+ console.log();
+ document.write(DATA.main.temp - 273);
+}
+
+if((DATA.main.temp - 273) > 15){
+  return (++this.happiness);
+      }
+} else {
+  return (this.happiness); 
+}
 
 };
